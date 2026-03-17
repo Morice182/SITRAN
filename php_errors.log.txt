@@ -1,0 +1,81 @@
+[05-Jan-2026 23:54:29 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?' at line 1 in C:\xampp\htdocs\mina\validar.php:35
+Stack trace:
+#0 C:\xampp\htdocs\mina\validar.php(35): mysqli->prepare('SHOW TABLES LIK...')
+#1 C:\xampp\htdocs\mina\validar.php(56): table_exists(Object(mysqli), 'registros')
+#2 {main}
+  thrown in C:\xampp\htdocs\mina\validar.php on line 35
+[05-Jan-2026 23:54:31 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?' at line 1 in C:\xampp\htdocs\mina\validar.php:35
+Stack trace:
+#0 C:\xampp\htdocs\mina\validar.php(35): mysqli->prepare('SHOW TABLES LIK...')
+#1 C:\xampp\htdocs\mina\validar.php(56): table_exists(Object(mysqli), 'registros')
+#2 {main}
+  thrown in C:\xampp\htdocs\mina\validar.php on line 35
+[05-Jan-2026 23:54:40 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?' at line 1 in C:\xampp\htdocs\mina\validar.php:35
+Stack trace:
+#0 C:\xampp\htdocs\mina\validar.php(35): mysqli->prepare('SHOW TABLES LIK...')
+#1 C:\xampp\htdocs\mina\validar.php(56): table_exists(Object(mysqli), 'registros')
+#2 {main}
+  thrown in C:\xampp\htdocs\mina\validar.php on line 35
+[05-Jan-2026 23:55:04 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?' at line 1 in C:\xampp\htdocs\mina\validar.php:35
+Stack trace:
+#0 C:\xampp\htdocs\mina\validar.php(35): mysqli->prepare('SHOW TABLES LIK...')
+#1 C:\xampp\htdocs\mina\validar.php(56): table_exists(Object(mysqli), 'registros')
+#2 {main}
+  thrown in C:\xampp\htdocs\mina\validar.php on line 35
+[05-Jan-2026 23:56:29 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?' at line 1 in C:\xampp\htdocs\mina\validar.php:35
+Stack trace:
+#0 C:\xampp\htdocs\mina\validar.php(35): mysqli->prepare('SHOW TABLES LIK...')
+#1 C:\xampp\htdocs\mina\validar.php(56): table_exists(Object(mysqli), 'registros')
+#2 {main}
+  thrown in C:\xampp\htdocs\mina\validar.php on line 35
+[05-Jan-2026 23:56:30 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?' at line 1 in C:\xampp\htdocs\mina\validar.php:35
+Stack trace:
+#0 C:\xampp\htdocs\mina\validar.php(35): mysqli->prepare('SHOW TABLES LIK...')
+#1 C:\xampp\htdocs\mina\validar.php(56): table_exists(Object(mysqli), 'registros')
+#2 {main}
+  thrown in C:\xampp\htdocs\mina\validar.php on line 35
+[19-Jan-2026 07:15:25 Europe/Berlin] SCAN: 75085118 | BAJADA PERMITIDA | AREQUIPA | BUS:TPP 01 EECC | PLACA:HAYSBN
+[19-Jan-2026 07:18:46 Europe/Berlin] SCAN: 75085118 | BAJADA PERMITIDA | AREQUIPA | BUS:TPP 01 EECC | PLACA:HAYSBN
+[19-Jan-2026 07:28:39 Europe/Berlin] SCAN: 10806297 | NO AUTORIZADO | N/A | BUS:SIN ASIGNAR | PLACA:---
+[19-Jan-2026 07:34:07 Europe/Berlin] SCAN: 16482124 | NO AUTORIZADO | N/A | BUS:SIN ASIGNAR | PLACA:---
+[19-Jan-2026 07:34:21 Europe/Berlin] SCAN: 16482124 | NO AUTORIZADO | N/A | BUS:SIN ASIGNAR | PLACA:---
+[19-Jan-2026 07:36:42 Europe/Berlin] SCAN: 16482124 | NO AUTORIZADO | N/A | BUS:SIN ASIGNAR | PLACA:---
+[19-Jan-2026 07:37:31 Europe/Berlin] SCAN: 16482124 | SUBIDA PERMITIDA | LIMA | BUS:TPP 01 EECC | PLACA:H3556
+[19-Jan-2026 08:06:49 Europe/Berlin] SCAN: 16482124 | SUBIDA PERMITIDA | LIMA | BUS:TPP 01 EECC | PLACA:H3556
+[19-Jan-2026 08:07:57 Europe/Berlin] SCAN: 16482124 | SUBIDA PERMITIDA | LIMA | BUS:TPP 01 EECC | PLACA:H3556
+[19-Jan-2026 08:08:12 Europe/Berlin] SCAN: 16482124 | SUBIDA PERMITIDA | LIMA | BUS:TPP 01 EECC | PLACA:H3556
+[19-Jan-2026 13:28:03 Europe/Berlin] SCAN: 44276570 | NO REGISTRADO | N/A | BUS:SIN ASIGNAR | PLACA:---
+[19-Jan-2026 13:28:25 Europe/Berlin] SCAN: 44276570 | NO REGISTRADO | N/A | BUS:SIN ASIGNAR | PLACA:---
+[19-Jan-2026 13:28:30 Europe/Berlin] SCAN: 44276570 | NO REGISTRADO | N/A | BUS:SIN ASIGNAR | PLACA:---
+[19-Jan-2026 13:28:35 Europe/Berlin] SCAN: 44276570 | NO REGISTRADO | N/A | BUS:SIN ASIGNAR | PLACA:---
+[19-Jan-2026 13:28:38 Europe/Berlin] SCAN: 44276570 | NO REGISTRADO | N/A | BUS:SIN ASIGNAR | PLACA:---
+[19-Jan-2026 13:28:56 Europe/Berlin] SCAN: 71252939 | NO AUTORIZADO | N/A | BUS:SIN ASIGNAR | PLACA:---
+[19-Jan-2026 13:40:27 Europe/Berlin] SCAN: 70385706 | SUBIDA PERMITIDA | LIMA | BUS:TPP 01 EECC | PLACA:H3556
+[19-Jan-2026 13:42:49 Europe/Berlin] SCAN: 71252939 | NO AUTORIZADO | N/A | BUS:SIN ASIGNAR | PLACA:---
+[19-Jan-2026 13:42:55 Europe/Berlin] SCAN: 71252939 | NO AUTORIZADO | N/A | BUS:SIN ASIGNAR | PLACA:---
+[19-Jan-2026 14:28:31 Europe/Berlin] SCAN: 16482124 | SUBIDA PERMITIDA | LIMA | BUS:TPP 01 EECC | PLACA:H3556
+[19-Jan-2026 15:37:33 Europe/Berlin] SCAN: 16482124 | SUBIDA PERMITIDA | LIMA | BUS:TPP 01 EECC | PLACA:H3556
+[19-Jan-2026 15:38:45 Europe/Berlin] SCAN: 70385706 | SUBIDA PERMITIDA | LIMA | BUS:TPP 01 EECC | PLACA:H3556
+[19-Jan-2026 15:41:43 Europe/Berlin] SCAN: 71252939 | NO AUTORIZADO | N/A | BUS:SIN ASIGNAR | PLACA:---
+[19-Jan-2026 15:44:54 Europe/Berlin] SCAN: 42775715 | NO REGISTRADO | N/A | BUS:SIN ASIGNAR | PLACA:---
+[19-Jan-2026 15:46:08 Europe/Berlin] SCAN: 72141531 | SUBIDA PERMITIDA | LIMA | BUS:TPP 01 EECC | PLACA:H3556
+[19-Jan-2026 15:46:18 Europe/Berlin] SCAN: 30571295 | NO AUTORIZADO | N/A | BUS:SIN ASIGNAR | PLACA:---
+[19-Jan-2026 15:49:35 Europe/Berlin] SCAN: 16482124 | SUBIDA PERMITIDA | LIMA | BUS:TPP 01 EECC | PLACA:H3556
+[19-Jan-2026 15:49:44 Europe/Berlin] SCAN: 16482124 | SUBIDA PERMITIDA | LIMA | BUS:TPP 01 EECC | PLACA:H3556
+[19-Jan-2026 15:49:49 Europe/Berlin] SCAN: 10806297 | SUBIDA PERMITIDA | LIMA | BUS:TPP 01 EECC | PLACA:H3556
+[19-Jan-2026 15:49:54 Europe/Berlin] SCAN: 10282669 | SUBIDA PERMITIDA | LIMA | BUS:TPP 01 EECC | PLACA:H3556
+[19-Jan-2026 15:50:52 Europe/Berlin] SCAN: 10282669 | SUBIDA PERMITIDA | LIMA | BUS:TPP 01 EECC | PLACA:H3556
+[19-Jan-2026 15:57:04 Europe/Berlin] SCAN: 16482124 | SUBIDA PERMITIDA | LIMA | BUS:TPP 01 EECC | PLACA:H3556
+[19-Jan-2026 15:57:07 Europe/Berlin] SCAN: 10806297 | SUBIDA PERMITIDA | LIMA | BUS:TPP 01 EECC | PLACA:H3556
+[19-Jan-2026 15:57:12 Europe/Berlin] SCAN: 10282669 | SUBIDA PERMITIDA | LIMA | BUS:TPP 01 EECC | PLACA:H3556
+[19-Jan-2026 15:57:17 Europe/Berlin] SCAN: 42635757 | SUBIDA PERMITIDA | LIMA | BUS:TPP 01 EECC | PLACA:H3556
+[19-Jan-2026 15:57:24 Europe/Berlin] SCAN: 08743135 | SUBIDA PERMITIDA | LIMA | BUS:TPP 01 EECC | PLACA:H3556
+[19-Jan-2026 15:57:27 Europe/Berlin] SCAN: 10804819 | SUBIDA PERMITIDA | LIMA | BUS:TPP 01 EECC | PLACA:H3556
+[19-Jan-2026 15:57:36 Europe/Berlin] SCAN: 70385706 | SUBIDA PERMITIDA | LIMA | BUS:TPP 01 EECC | PLACA:H3556
+[19-Jan-2026 15:57:41 Europe/Berlin] SCAN: 70385706 | SUBIDA PERMITIDA | LIMA | BUS:TPP 01 EECC | PLACA:H3556
+[19-Jan-2026 15:57:43 Europe/Berlin] SCAN: 71252939 | NO AUTORIZADO | N/A | BUS:SIN ASIGNAR | PLACA:---
+[19-Jan-2026 17:51:41 Europe/Berlin] SCAN: 70385706 | SUBIDA PERMITIDA | LIMA | BUS:TPP 01 EECC | PLACA:H3556
+[20-Jan-2026 22:55:48 Europe/Berlin] SCAN: 75085118 | BAJADA PERMITIDA | AREQUIPA | BUS:TPP 01 EECC | PLACA:HAYSBN
+[20-Jan-2026 23:16:48 Europe/Berlin] SCAN: 75085118 | BAJADA PERMITIDA | AREQUIPA | BUS:TPP 01 EECC | PLACA:HAYSBN
+[20-Jan-2026 23:17:04 Europe/Berlin] SCAN: 75085118 | BAJADA PERMITIDA | AREQUIPA | BUS:TPP 01 EECC | PLACA:HAYSBN
+[21-Jan-2026 16:10:04 Europe/Berlin] SCAN: 46997925 | SUBIDA PERMITIDA | AREQUIPA | BUS:DAJOR 01 | PLACA:DAJOR 01

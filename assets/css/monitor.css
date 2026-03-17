@@ -1,0 +1,99 @@
+/**
+ * monitor.css — Panel de Monitoreo en Tiempo Real · Hochschild Mining
+ */
+:root {
+    --h-gold:    #c5a059;
+    --h-dark:    #1a1c1e;
+    --h-gray-bg: #f4f4f7;
+    --h-white:   #ffffff;
+    --success:   #10b981;
+    --danger:    #ef4444;
+    --warning:   #f59e0b;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+}
+*,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+body {
+    font-family:'Inter',system-ui,sans-serif;
+    background:var(--h-gray-bg); color:#334155;
+    padding-bottom:60px;
+    -webkit-font-smoothing:antialiased;
+}
+
+/* ── Header oscuro ── */
+header {
+    background:var(--h-dark); padding:0 5%;
+    display:flex; justify-content:space-between; align-items:center;
+    border-bottom:4px solid var(--h-gold);
+    position:sticky; top:0; z-index:1000; height:75px;
+}
+header img { height:90px; width:auto; margin-top:15px; filter:drop-shadow(0 4px 6px rgba(0,0,0,.4)); }
+.header-left, .header-right { flex:1; display:flex; }
+.header-right { justify-content:flex-end; }
+
+/* ── Botones de topbar ── */
+.btn-top { padding:10px 16px; border-radius:12px; text-decoration:none; font-weight:700; font-size:12px; display:flex; align-items:center; gap:8px; cursor:pointer; border:none; font-family:inherit; }
+.btn-export { background:var(--success); color:white; }
+.btn-update { background:var(--h-gold); color:white; margin-right:10px; transition:background .2s; }
+.btn-update:hover { background:#b08d4b; }
+.btn-pdf  { background:#ef4444; color:white; margin-right:10px; }
+.btn-back { background:rgba(255,255,255,.1); color:white; border:1px solid rgba(255,255,255,.1); }
+
+/* ── Layout ── */
+.container { max-width:1100px; margin:auto; padding:24px 16px; }
+
+/* ── KPI row ── */
+.kpi-row { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin-bottom:32px; }
+.kpi-card { background:var(--h-white); padding:24px; border-radius:var(--radius-md); border-left:4px solid var(--h-gold); display:flex; align-items:center; gap:20px; box-shadow:0 4px 6px rgba(0,0,0,.05); }
+.kpi-card b { font-size:24px; color:var(--h-dark); display:block; }
+
+/* ── Formulario de agregar pasajero ── */
+.form-box { background:var(--h-white); padding:32px; border-radius:var(--radius-lg); margin-bottom:40px; box-shadow:0 10px 25px rgba(0,0,0,.03); }
+.form-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px; }
+input,select { padding:14px; border-radius:12px; border:1px solid #e2e8f0; font-size:14px; outline:none; width:100%; font-family:inherit; }
+input:focus, select:focus { border-color:var(--h-gold); }
+button[name="agregar_pasajero"] { padding:14px; border-radius:12px; background:var(--h-dark); color:white; border:none; font-weight:700; cursor:pointer; font-family:inherit; font-size:14px; }
+
+/* ── Títulos de sección ── */
+.section-title { font-size:11px; font-weight:800; text-transform:uppercase; letter-spacing:2px; margin:32px 0 16px; display:flex; align-items:center; gap:10px; }
+
+/* ── Tarjetas de bus ── */
+.bus-card { background:var(--h-white); border-radius:16px; margin-bottom:12px; overflow:hidden; border:1px solid #edf2f7; }
+.bus-header { padding:20px 24px; display:flex; justify-content:space-between; align-items:center; cursor:pointer; transition:background .15s; }
+.bus-header:hover { background:#f8fafc; }
+.perc-badge { background:#f1f5f9; padding:6px 12px; border-radius:20px; font-weight:800; color:var(--h-gold); font-size:12px; }
+.bus-body  { display:none; padding:24px; border-top:1px solid #f1f5f9; }
+.progress  { height:8px; background:#f1f5f9; border-radius:10px; overflow:hidden; margin-bottom:20px; }
+.progress-bar { height:100%; background:var(--h-gold); transition:width .6s ease; }
+
+/* ── Tabla ── */
+.table-container { overflow-x:auto; }
+table { width:100%; border-collapse:collapse; }
+th { font-size:10px; text-transform:uppercase; color:#94a3b8; padding:12px; text-align:left; }
+td { padding:14px 12px; border-bottom:1px solid #f8fafc; font-size:13px; }
+
+/* ── Estados de fila ── */
+.row-escaneado { background:rgba(16,185,129,.06) !important; }
+.row-pendiente { background:rgba(239,68,68,.04)  !important; }
+.row-nuevo     { background:rgba(245,158,11,.08) !important; }
+
+.status-dot  { width:12px; height:12px; border-radius:50%; display:block; margin:auto; }
+.bg-escaneado { background:var(--success); box-shadow:0 0 8px var(--success); }
+.bg-pendiente { background:var(--danger); opacity:.6; }
+.bg-nuevo     { background:var(--warning); animation:pulse 2s infinite; }
+
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
+
+.asiento-badge { background:#fff; border:1px solid #e2e8f0; padding:4px 10px; border-radius:6px; font-weight:800; color:var(--h-dark); }
+.text-muted    { font-size:11px; color:#94a3b8; }
+
+/* ── Impresión (PDF) ── */
+@media print {
+    header,.form-box,.btn-top,.kpi-row,button { display:none !important; }
+    .bus-body { display:block !important; border:none; }
+    body { background:white; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    .container { width:100%; max-width:100%; padding:0; }
+    .bus-card { page-break-inside:avoid; border:1px solid #000; margin-bottom:20px; box-shadow:none; }
+    .section-title { color:black !important; text-decoration:underline; }
+    .perc-badge,.progress { display:none; }
+}

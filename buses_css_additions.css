@@ -1,0 +1,186 @@
+/*
+ * buses.css — ADICIONES / PARCHE
+ * Agrega aquí los estilos que estaban inline en buses.php
+ * para centralizar todo el diseño en este archivo.
+ *
+ * INSTRUCCIÓN: Copia este contenido al final de tu buses.css actual.
+ */
+
+/* ── LOADER ──────────────────────────────────────────────────────────────── */
+.loader-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(255,255,255,0.8);
+    z-index: 300;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.loader-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #ccc;
+    border-top: 4px solid #b8872b;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+.loader-text {
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--brandGold);
+}
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ── TOPBAR ──────────────────────────────────────────────────────────────── */
+.topbar-icon {
+    color: var(--textMuted);
+    text-align: center;
+}
+.topbar-right {
+    text-align: right;
+}
+.btn-icon {
+    background: none;
+    border: none;
+    color: var(--textMuted);
+    font-size: 20px;
+    cursor: pointer;
+}
+.session-count {
+    font-size: 9px;
+    color: var(--textMuted);
+    font-weight: normal;
+}
+
+/* ── ETIQUETAS ───────────────────────────────────────────────────────────── */
+.label-bajada {
+    font-size: 10px;
+    font-weight: 800;
+    color: #b8872b;
+    display: block;
+    margin-bottom: 5px;
+}
+.label-info {
+    color: #0284c7;
+}
+.label-seat-title {
+    text-align: center;
+    margin-top: 10px;
+    color: #b8872b;
+}
+
+/* ── BOTONES ─────────────────────────────────────────────────────────────── */
+.icon-gold {
+    color: var(--brandGold);
+    margin-right: 8px;
+}
+.btn-cancel  { background: #eee; color: #666; }
+.btn-confirm { background: var(--brandGold); color: white; }
+
+/* ── MODAL ───────────────────────────────────────────────────────────────── */
+.modal-title        { color: #b8872b; }
+.modal-title-center { text-align: center; color: var(--brandGold); margin-bottom: 5px; }
+.modal-subtitle     { text-align: center; font-size: 11px; margin-bottom: 15px; color: #666; }
+.modal-actions      { display: flex; gap: 12px; margin-top: 20px; }
+
+/* ── CAMPOS EXTRA ────────────────────────────────────────────────────────── */
+.extra-fields-box {
+    background: #f0f9ff;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #bae6fd;
+    margin-bottom: 10px;
+}
+
+/* ── FORMULARIO ──────────────────────────────────────────────────────────── */
+.form-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+/* ── MAPA DE ASIENTOS ────────────────────────────────────────────────────── */
+.bus-placeholder {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #64748b;
+    font-size: 11px;
+}
+.bus-placeholder.error { color: red; }
+
+.dot-libre       { background: #fff; border: 1px solid #999; }
+.dot-ocupado     { background: #ef4444; }
+.dot-seleccionado{ background: #b8872b; }
+
+.seat-selection-text {
+    text-align: center;
+    font-weight: bold;
+    color: var(--brandGold);
+    margin-bottom: 10px;
+}
+
+/* ── TARJETA DE PERSONA ──────────────────────────────────────────────────── */
+.card-name {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.nombre-completo {
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 1.2;
+}
+.foto-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eee;
+}
+.foto-placeholder i {
+    color: #ccc;
+}
+
+/* ── PANEL MÉDICO ────────────────────────────────────────────────────────── */
+.med-panel {
+    margin-top: 15px;
+    padding: 15px;
+    background: #fff1f2;
+    border: 1px solid #fda4af;
+    border-radius: 15px;
+    text-align: left;
+    font-size: 12px;
+}
+.med-title {
+    color: #e11d48;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+.btn-med {
+    width: 100%;
+    margin-top: 15px;
+    background: #be123c;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 11px;
+    cursor: pointer;
+}
+.tel-emergencia {
+    color: #be123c;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+/* ── TRIP BOX ────────────────────────────────────────────────────────────── */
+.trip-row     { margin-bottom: 10px; }
+.trip-row-sep { border-top: 1px solid rgba(184,135,43,0.2); padding-top: 10px; }
+.trip-mono    { color: var(--textMain); font-family: monospace; }
+
+/* ── HISTORIAL ───────────────────────────────────────────────────────────── */
+.mono      { font-family: monospace; }
+.text-muted{ color: var(--textMuted); }

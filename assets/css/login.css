@@ -1,0 +1,190 @@
+/**
+ * login.css — Formulario de acceso · Hochschild Mining SITRAN
+ */
+:root {
+    --h-gold: #C49A2C;
+    --h-gold-dark: #8A6A14;
+    --h-dark: #1a1c1e;
+    --h-gray-bg: #f4f4f7;
+    --white: #ffffff;
+    --text-main: #334155;
+    --radius-md: 16px;
+}
+
+*,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+
+body {
+    font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+    background-color: var(--h-dark);
+    background-image:
+        linear-gradient(rgba(26,28,30,.55), rgba(26,28,30,.65)),
+        url('../index/inmaculada.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+.login-card {
+    background: rgba(255,255,255,.97);
+    backdrop-filter: blur(12px);
+    padding: 48px 32px;
+    border-radius: 24px;
+    box-shadow: 0 32px 64px -12px rgba(0,0,0,.55);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    border-top: 5px solid var(--h-gold);
+    animation: fadeIn .5s cubic-bezier(.34,1.1,.64,1);
+}
+
+@keyframes fadeIn {
+    from { opacity:0; transform:translateY(24px); }
+    to   { opacity:1; transform:translateY(0); }
+}
+
+.logo-h {
+    height: 160px;
+    width: auto;
+    margin-bottom: 12px;
+    object-fit: contain;
+}
+
+.login-title {
+    color: var(--h-dark);
+    font-size: 11px;
+    margin-bottom: 28px;
+    text-transform: uppercase;
+    letter-spacing: 3.5px;
+    font-weight: 800;
+    opacity: .7;
+}
+
+/* ── Inputs ── */
+.input-group {
+    position: relative;
+    margin-bottom: 14px;
+    text-align: left;
+}
+.input-group i {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--h-gold);
+    font-size: 15px;
+    transition: .25s;
+    z-index:1;
+}
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 15px 16px 15px 48px;
+    border: 1.5px solid #e2e8f0;
+    border-radius: var(--radius-md);
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+    background: #f8fafc;
+    color: var(--h-dark);
+    transition: all .25s cubic-bezier(.4,0,.2,1);
+}
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: var(--h-gold);
+    background: var(--white);
+    box-shadow: 0 0 0 4px rgba(196,154,44,.12);
+}
+input:focus ~ i,
+input:focus + i {
+    color: var(--h-gold-dark);
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* ── Botón submit ── */
+.btn-login {
+    width: 100%;
+    padding: 15px;
+    background: var(--h-dark);
+    border: none;
+    color: var(--white);
+    border-radius: var(--radius-md);
+    font-size: 13px;
+    font-family: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    margin-top: 8px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all .25s;
+    box-shadow: 0 4px 12px rgba(0,0,0,.12);
+    position: relative; overflow: hidden;
+}
+.btn-login::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0;
+    height: 0;
+    background: var(--h-gold);
+    transition: height .25s;
+}
+.btn-login:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(0,0,0,.25);
+}
+.btn-login:hover::after { height: 3px; }
+.btn-login:active { transform: scale(.97); }
+
+/* ── Error ── */
+.error-msg {
+    color: #fff;
+    font-size: 13px;
+    margin-top: 20px;
+    background: #ef4444;
+    padding: 11px 16px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    animation: shake .4s;
+}
+@keyframes shake {
+    0%,100% { transform:translateX(0); }
+    25%      { transform:translateX(-5px); }
+    75%      { transform:translateX(5px); }
+}
+
+/* ── Links ── */
+.links-container {
+    margin-top: 28px;
+    padding-top: 18px;
+    border-top: 1px solid #f1f5f9;
+}
+.register-link { font-size: 13px; color: #64748b; }
+.register-link a {
+    color: var(--h-gold);
+    text-decoration: none;
+    font-weight: 700;
+    margin-left: 5px;
+    transition: color .2s;
+}
+.register-link a:hover { color: var(--h-gold-dark); text-decoration: underline; }
+
+/* ── Footer ── */
+.footer-text {
+    position: absolute;
+    bottom: -48px;
+    left: 0; right: 0;
+    color: rgba(255,255,255,.7);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 5px rgba(0,0,0,.8);
+}

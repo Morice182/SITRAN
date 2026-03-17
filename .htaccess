@@ -1,0 +1,50 @@
+# Apache .htaccess — Seguridad SITRAN · Hochschild Mining
+
+# ── Bloquear acceso directo a logs y archivos sensibles ──────────────────────
+<FilesMatch "\.(log|log\.txt|env|ini|sql|sh|bak|swp)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# ── Bloquear acceso directo al directorio includes/ ──────────────────────────
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Redirigir acceso directo a includes/ al 403
+    RewriteRule ^includes/.*$  - [F,L]
+</IfModule>
+
+# ── Headers de seguridad básicos ─────────────────────────────────────────────
+<IfModule mod_headers.c>
+    # Evitar clickjacking
+    Header always set X-Frame-Options "SAMEORIGIN"
+    # Evitar MIME-sniffing
+    Header always set X-Content-Type-Options "nosniff"
+    # XSS básico en navegadores antiguos
+    Header always set X-XSS-Protection "1; mode=block"
+    # Referrer Policy
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# ── Charset y compresión ─────────────────────────────────────────────────────
+AddDefaultCharset UTF-8
+
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json
+</IfModule>
+
+# ── Caché para assets estáticos ──────────────────────────────────────────────
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css                  "access plus 1 month"
+    ExpiresByType application/javascript    "access plus 1 month"
+    ExpiresByType image/png                 "access plus 3 months"
+    ExpiresByType image/jpeg                "access plus 3 months"
+    ExpiresByType image/svg+xml             "access plus 3 months"
+</IfModule>
+
+# ── Ocultar versión del servidor ─────────────────────────────────────────────
+ServerSignature Off
+
+# ── Opciones de directorio ───────────────────────────────────────────────────
+Options -Indexes
